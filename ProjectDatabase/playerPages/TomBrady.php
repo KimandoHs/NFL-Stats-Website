@@ -114,7 +114,7 @@ global $playerNames;
 		
 		<div class="sidenav">
 		<a href="../index.php">Homepage</a>
-		<a href="#services">NFL Stat Leaders</a>
+		<a href="../nflstatleaders.php">NFL Stat Leaders</a>
 		<a href="#services">NFL Standings</a>
 		</div>
 
@@ -199,8 +199,7 @@ global $playerNames;
 	?> </div>
 	
 	<div class = "container">
-		
-            <form id="tomBrady2021Stats" method="post" action="">
+            <form id="tomBrady2021Stats" method="get" action="">
                 <div class="input-group mb-3">
                     <input class="button2" type="submit" name = "tomBrady2021Stats" value = "Tom Brady 2021 Stats"> 
                 </div>
@@ -209,7 +208,7 @@ global $playerNames;
 		
 		<div class="container">
             <?php
-                if(isset($_POST['tomBrady2021Stats']))
+                if(isset($_GET['tomBrady2021Stats']))
                 {
                     echo "<table class='table table-md table-bordered'>";
                     echo "<thead class='thead-dark' style='text-align: center'>";
@@ -293,7 +292,7 @@ global $playerNames;
 		
 		<div class = "container">
 		
-            <form id="tomBrady2020Stats" method="post" action="">
+            <form id="tomBrady2020Stats" method="get" action="">
                 <div class="input-group mb-3">
                     <input class="button2" type="submit" name = "tomBrady2020Stats" value = "Tom Brady 2020 Stats"> 
                 </div>
@@ -302,7 +301,7 @@ global $playerNames;
 		
 		<div class="container">
             <?php
-                if(isset($_POST['tomBrady2020Stats']))
+                if(isset($_GET['tomBrady2020Stats']))
                 {
                     echo "<table class='table table-md table-bordered'>";
                     echo "<thead class='thead-dark' style='text-align: center'>";
@@ -385,7 +384,7 @@ global $playerNames;
         </div>
 		
 		<div class = "container">
-		        <form id="tomBrady2019Stats" method="post" action="">
+		        <form id="tomBrady2019Stats" method="GET" action="">
                 <div class="input-group mb-3">
                     <input class="button2" type="submit" name = "tomBrady2019Stats" value = "Tom Brady 2019 Stats"> 
                 </div>
@@ -394,7 +393,7 @@ global $playerNames;
 		
 		<div class="container">
             <?php
-                if(isset($_POST['tomBrady2019Stats']))
+                if(isset($_GET['tomBrady2019Stats']))
                 {
                     echo "<table class='table table-md table-bordered'>";
                     echo "<thead class='thead-dark' style='text-align: center'>";
@@ -477,7 +476,7 @@ global $playerNames;
         </div>
 		
 			<div class = "container">
-		        <form id="tomBrady2018Stats" method="post" action="">
+		        <form id="tomBrady2018Stats" method="GET" action="">
                 <div class="input-group mb-3">
                     <input class="button2" type="submit" name = "tomBrady2018Stats" value = "Tom Brady 2018 Stats"> 
                 </div>
@@ -486,7 +485,7 @@ global $playerNames;
 		
 		<div class="container">
             <?php
-                if(isset($_POST['tomBrady2018Stats']))
+                if(isset($_GET['tomBrady2018Stats']))
                 {
                     echo "<table class='table table-md table-bordered'>";
                     echo "<thead class='thead-dark' style='text-align: center'>";
@@ -569,7 +568,7 @@ global $playerNames;
         </div>
 		
 		<div class = "container">
-		        <form id="tomBrady2017Stats" method="post" action="">
+		        <form id="tomBrady2017Stats" method="GET" action="">
                 <div class="input-group mb-3">
                     <input class="button2" type="submit" name = "tomBrady2017Stats" value = "Tom Brady 2017 Stats"> 
                 </div>
@@ -578,7 +577,7 @@ global $playerNames;
 		
 		<div class="container">
             <?php
-                if(isset($_POST['tomBrady2017Stats']))
+                if(isset($_GET['tomBrady2017Stats']))
                 {
                     echo "<table class='table table-md table-bordered'>";
                     echo "<thead class='thead-dark' style='text-align: center'>";
@@ -661,7 +660,7 @@ global $playerNames;
         </div>
 		
 		<div class = "container">
-		        <form id="tomBrady2016Stats" method="post" action="">
+		        <form id="tomBrady2016Stats" method="GET" action="">
                 <div class="input-group mb-3">
                     <input class="button2" type="submit" name = "tomBrady2016Stats" value = "Tom Brady 2016 Stats"> 
                 </div>
@@ -670,7 +669,7 @@ global $playerNames;
 		
 		<div class="container">
             <?php
-                if(isset($_POST['tomBrady2016Stats']))
+                if(isset($_GET['tomBrady2016Stats']))
                 {
                     echo "<table class='table table-md table-bordered'>";
                     echo "<thead class='thead-dark' style='text-align: center'>";
@@ -753,7 +752,7 @@ global $playerNames;
         </div>
 		
 		<div class = "container">
-		        <form id="tomBrady2015Stats" method="post" action="">
+		        <form id="tomBrady2015Stats" method="GET" action="">
                 <div class="input-group mb-3">
                     <input class="button2" type="submit" name = "tomBrady2015Stats" value = "Tom Brady 2015 Stats"> 
                 </div>
@@ -762,7 +761,7 @@ global $playerNames;
 		
 		<div class="container">
             <?php
-                if(isset($_POST['tomBrady2015Stats']))
+                if(isset($_GET['tomBrady2015Stats']))
                 {
                     echo "<table class='table table-md table-bordered'>";
                     echo "<thead class='thead-dark' style='text-align: center'>";
@@ -845,7 +844,7 @@ global $playerNames;
         </div>
 		
 		<div class = "container">
-		        <form id="tomBrady2014Stats" method="post" action="">
+		        <form id="tomBrady2014Stats" method="GET" action="">
                 <div class="input-group mb-3">
                     <input class="button2" type="submit" name = "tomBrady2014Stats" value = "Tom Brady 2014 Stats"> 
                 </div>
@@ -854,7 +853,7 @@ global $playerNames;
 		
 		<div class="container">
             <?php
-                if(isset($_POST['tomBrady2014Stats']))
+                if(isset($_GET['tomBrady2014Stats']))
                 {
                     echo "<table class='table table-md table-bordered'>";
                     echo "<thead class='thead-dark' style='text-align: center'>";
@@ -937,7 +936,7 @@ global $playerNames;
         </div>
 		
 		<div class = "container">
-		        <form id="tomBrady2013Stats" method="post" action="">
+		        <form id="tomBrady2013Stats" method="GET" action="">
                 <div class="input-group mb-3">
                     <input class="button2" type="submit" name = "tomBrady2013Stats" value = "Tom Brady 2013 Stats"> 
                 </div>
@@ -946,7 +945,7 @@ global $playerNames;
 		
 		<div class="container">
             <?php
-                if(isset($_POST['tomBrady2013Stats']))
+                if(isset($_GET['tomBrady2013Stats']))
                 {
                     echo "<table class='table table-md table-bordered'>";
                     echo "<thead class='thead-dark' style='text-align: center'>";
@@ -1029,7 +1028,7 @@ global $playerNames;
         </div>
 		
 		<div class = "container">
-		        <form id="tomBrady2012Stats" method="post" action="">
+		        <form id="tomBrady2012Stats" method="GET" action="">
                 <div class="input-group mb-3">
                     <input class="button2" type="submit" name = "tomBrady2012Stats" value = "Tom Brady 2012 Stats"> 
                 </div>
@@ -1038,7 +1037,7 @@ global $playerNames;
 		
 		<div class="container">
             <?php
-                if(isset($_POST['tomBrady2012Stats']))
+                if(isset($_GET['tomBrady2012Stats']))
                 {
                     echo "<table class='table table-md table-bordered'>";
                     echo "<thead class='thead-dark' style='text-align: center'>";
@@ -1121,7 +1120,7 @@ global $playerNames;
         </div>
 		
 		<div class = "container">
-		        <form id="tomBrady2011Stats" method="post" action="">
+		        <form id="tomBrady2011Stats" method="GET" action="">
                 <div class="input-group mb-3">
                     <input class="button2" type="submit" name = "tomBrady2011Stats" value = "Tom Brady 2011 Stats"> 
                 </div>
@@ -1130,7 +1129,7 @@ global $playerNames;
 		
 		<div class="container">
             <?php
-                if(isset($_POST['tomBrady2011Stats']))
+                if(isset($_GET['tomBrady2011Stats']))
                 {
                     echo "<table class='table table-md table-bordered'>";
                     echo "<thead class='thead-dark' style='text-align: center'>";
@@ -1213,7 +1212,7 @@ global $playerNames;
         </div>
 		
 		<div class = "container">
-		        <form id="tomBrady2010Stats" method="post" action="">
+		        <form id="tomBrady2010Stats" method="GET" action="">
                 <div class="input-group mb-3">
                     <input class="button2" type="submit" name = "tomBrady2010Stats" value = "Tom Brady 2010 Stats"> 
                 </div>
@@ -1222,7 +1221,7 @@ global $playerNames;
 		
 		<div class="container">
             <?php
-                if(isset($_POST['tomBrady2010Stats']))
+                if(isset($_GET['tomBrady2010Stats']))
                 {
                     echo "<table class='table table-md table-bordered'>";
                     echo "<thead class='thead-dark' style='text-align: center'>";
@@ -1305,8 +1304,930 @@ global $playerNames;
         </div>
 		
 		<div class = "container">
+		        <form id="tomBrady2009Stats" method="GET" action="">
+                <div class="input-group mb-3">
+                    <input class="button2" type="submit" name = "tomBrady2009Stats" value = "Tom Brady 2009 Stats"> 
+                </div>
+            </form>
+        </div>
 		
-            <form id="tomBradyCareerStats" method="post" action="">
+		<div class="container">
+            <?php
+                if(isset($_GET['tomBrady2009Stats']))
+                {
+                    echo "<table class='table table-md table-bordered'>";
+                    echo "<thead class='thead-dark' style='text-align: center'>";
+                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year</th><th class='col-md-2'>Game</th>
+					<th class='col-md-2'>Completions</th><th class='col-md-2'>Attempts</th><th class='col-md-2'>Yards</th>
+					<th class='col-md-2'>Touchdowns</th><th class='col-md-2'>Interceptions</th>
+					<th class='col-md-2'>Sacks</th><th class='col-md-2'>Sack yards</th></thead></tr>";
+					
+
+
+                    class TableRows extends RecursiveIteratorIterator {
+                        function __construct($it) {
+                            parent::__construct($it, self::LEAVES_ONLY);
+                        }
+
+                        function current() {
+                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
+                            return "<td style='text-align:center'>" . parent::current(). "</td>";
+                        }
+
+                        function beginChildren() {
+                            echo "<tr>";
+                        }
+
+                        function endChildren() {
+                            echo "</tr>" . "\n";
+                        }
+                    }
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project database";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT * from qbgames where playerId = 1 and yearPlayed = 2009");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                            echo $v;
+                        }
+                    }
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+					 try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 1 AND yearPlayed = 2009");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+						$p = 0;
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+							echo $v;
+                        }
+						
+                    }
+					
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+                    $conn = null;
+                    echo "</table>";
+					
+					
+                }
+            ?>
+        </div>
+		
+		<div class = "container">
+		        <form id="tomBrady2008Stats" method="GET" action="">
+                <div class="input-group mb-3">
+                    <input class="button2" type="submit" name = "tomBrady2008Stats" value = "Tom Brady 2008 Stats"> 
+                </div>
+            </form>
+        </div>
+		
+		<div class="container">
+            <?php
+                if(isset($_GET['tomBrady2008Stats']))
+                {
+                    echo "<table class='table table-md table-bordered'>";
+                    echo "<thead class='thead-dark' style='text-align: center'>";
+                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year</th><th class='col-md-2'>Game</th>
+					<th class='col-md-2'>Completions</th><th class='col-md-2'>Attempts</th><th class='col-md-2'>Yards</th>
+					<th class='col-md-2'>Touchdowns</th><th class='col-md-2'>Interceptions</th>
+					<th class='col-md-2'>Sacks</th><th class='col-md-2'>Sack yards</th></thead></tr>";
+					
+
+
+                    class TableRows extends RecursiveIteratorIterator {
+                        function __construct($it) {
+                            parent::__construct($it, self::LEAVES_ONLY);
+                        }
+
+                        function current() {
+                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
+                            return "<td style='text-align:center'>" . parent::current(). "</td>";
+                        }
+
+                        function beginChildren() {
+                            echo "<tr>";
+                        }
+
+                        function endChildren() {
+                            echo "</tr>" . "\n";
+                        }
+                    }
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project database";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT * from qbgames where playerId = 1 and yearPlayed = 2008");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                            echo $v;
+                        }
+                    }
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+					 try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 1 AND yearPlayed = 2008");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+						$p = 0;
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+							echo $v;
+                        }
+						
+                    }
+					
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+                    $conn = null;
+                    echo "</table>";
+					
+					
+                }
+            ?>
+        </div>
+		
+		<div class = "container">
+		        <form id="tomBrady2007Stats" method="GET" action="">
+                <div class="input-group mb-3">
+                    <input class="button2" type="submit" name = "tomBrady2007Stats" value = "Tom Brady 2007 Stats"> 
+                </div>
+            </form>
+        </div>
+		
+		<div class="container">
+            <?php
+                if(isset($_GET['tomBrady2007Stats']))
+                {
+                    echo "<table class='table table-md table-bordered'>";
+                    echo "<thead class='thead-dark' style='text-align: center'>";
+                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year</th><th class='col-md-2'>Game</th>
+					<th class='col-md-2'>Completions</th><th class='col-md-2'>Attempts</th><th class='col-md-2'>Yards</th>
+					<th class='col-md-2'>Touchdowns</th><th class='col-md-2'>Interceptions</th>
+					<th class='col-md-2'>Sacks</th><th class='col-md-2'>Sack yards</th></thead></tr>";
+					
+
+
+                    class TableRows extends RecursiveIteratorIterator {
+                        function __construct($it) {
+                            parent::__construct($it, self::LEAVES_ONLY);
+                        }
+
+                        function current() {
+                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
+                            return "<td style='text-align:center'>" . parent::current(). "</td>";
+                        }
+
+                        function beginChildren() {
+                            echo "<tr>";
+                        }
+
+                        function endChildren() {
+                            echo "</tr>" . "\n";
+                        }
+                    }
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project database";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT * from qbgames where playerId = 1 and yearPlayed = 2007");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                            echo $v;
+                        }
+                    }
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+					 try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 1 AND yearPlayed = 2007");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+						$p = 0;
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+							echo $v;
+                        }
+						
+                    }
+					
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+                    $conn = null;
+                    echo "</table>";
+					
+					
+                }
+            ?>
+        </div>
+		
+		<div class = "container">
+		        <form id="tomBrady2006Stats" method="GET" action="">
+                <div class="input-group mb-3">
+                    <input class="button2" type="submit" name = "tomBrady2006Stats" value = "Tom Brady 2006 Stats"> 
+                </div>
+            </form>
+        </div>
+		
+		<div class="container">
+            <?php
+                if(isset($_GET['tomBrady2006Stats']))
+                {
+                    echo "<table class='table table-md table-bordered'>";
+                    echo "<thead class='thead-dark' style='text-align: center'>";
+                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year</th><th class='col-md-2'>Game</th>
+					<th class='col-md-2'>Completions</th><th class='col-md-2'>Attempts</th><th class='col-md-2'>Yards</th>
+					<th class='col-md-2'>Touchdowns</th><th class='col-md-2'>Interceptions</th>
+					<th class='col-md-2'>Sacks</th><th class='col-md-2'>Sack yards</th></thead></tr>";
+					
+
+
+                    class TableRows extends RecursiveIteratorIterator {
+                        function __construct($it) {
+                            parent::__construct($it, self::LEAVES_ONLY);
+                        }
+
+                        function current() {
+                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
+                            return "<td style='text-align:center'>" . parent::current(). "</td>";
+                        }
+
+                        function beginChildren() {
+                            echo "<tr>";
+                        }
+
+                        function endChildren() {
+                            echo "</tr>" . "\n";
+                        }
+                    }
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project database";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT * from qbgames where playerId = 1 and yearPlayed = 2006");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                            echo $v;
+                        }
+                    }
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+					 try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 1 AND yearPlayed = 2006");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+						$p = 0;
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+							echo $v;
+                        }
+						
+                    }
+					
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+                    $conn = null;
+                    echo "</table>";
+					
+					
+                }
+            ?>
+        </div>
+		
+		
+		<div class = "container">
+		        <form id="tomBrady2005Stats" method="GET" action="">
+                <div class="input-group mb-3">
+                    <input class="button2" type="submit" name = "tomBrady2005Stats" value = "Tom Brady 2005 Stats"> 
+                </div>
+            </form>
+        </div>
+		
+		<div class="container">
+            <?php
+                if(isset($_GET['tomBrady2005Stats']))
+                {
+                    echo "<table class='table table-md table-bordered'>";
+                    echo "<thead class='thead-dark' style='text-align: center'>";
+                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year</th><th class='col-md-2'>Game</th>
+					<th class='col-md-2'>Completions</th><th class='col-md-2'>Attempts</th><th class='col-md-2'>Yards</th>
+					<th class='col-md-2'>Touchdowns</th><th class='col-md-2'>Interceptions</th>
+					<th class='col-md-2'>Sacks</th><th class='col-md-2'>Sack yards</th></thead></tr>";
+					
+
+
+                    class TableRows extends RecursiveIteratorIterator {
+                        function __construct($it) {
+                            parent::__construct($it, self::LEAVES_ONLY);
+                        }
+
+                        function current() {
+                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
+                            return "<td style='text-align:center'>" . parent::current(). "</td>";
+                        }
+
+                        function beginChildren() {
+                            echo "<tr>";
+                        }
+
+                        function endChildren() {
+                            echo "</tr>" . "\n";
+                        }
+                    }
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project database";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT * from qbgames where playerId = 1 and yearPlayed = 2005");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                            echo $v;
+                        }
+                    }
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+					 try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 1 AND yearPlayed = 2005");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+						$p = 0;
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+							echo $v;
+                        }
+						
+                    }
+					
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+                    $conn = null;
+                    echo "</table>";
+					
+					
+                }
+            ?>
+        </div>
+		
+		<div class = "container">
+		        <form id="tomBrady2004Stats" method="GET" action="">
+                <div class="input-group mb-3">
+                    <input class="button2" type="submit" name = "tomBrady2004Stats" value = "Tom Brady 2004 Stats"> 
+                </div>
+            </form>
+        </div>
+		
+		<div class="container">
+            <?php
+                if(isset($_GET['tomBrady2004Stats']))
+                {
+                    echo "<table class='table table-md table-bordered'>";
+                    echo "<thead class='thead-dark' style='text-align: center'>";
+                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year</th><th class='col-md-2'>Game</th>
+					<th class='col-md-2'>Completions</th><th class='col-md-2'>Attempts</th><th class='col-md-2'>Yards</th>
+					<th class='col-md-2'>Touchdowns</th><th class='col-md-2'>Interceptions</th>
+					<th class='col-md-2'>Sacks</th><th class='col-md-2'>Sack yards</th></thead></tr>";
+					
+
+
+                    class TableRows extends RecursiveIteratorIterator {
+                        function __construct($it) {
+                            parent::__construct($it, self::LEAVES_ONLY);
+                        }
+
+                        function current() {
+                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
+                            return "<td style='text-align:center'>" . parent::current(). "</td>";
+                        }
+
+                        function beginChildren() {
+                            echo "<tr>";
+                        }
+
+                        function endChildren() {
+                            echo "</tr>" . "\n";
+                        }
+                    }
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project database";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT * from qbgames where playerId = 1 and yearPlayed = 2004");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                            echo $v;
+                        }
+                    }
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+					 try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 1 AND yearPlayed = 2004");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+						$p = 0;
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+							echo $v;
+                        }
+						
+                    }
+					
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+                    $conn = null;
+                    echo "</table>";
+					
+					
+                }
+            ?>
+        </div>
+		
+			<div class = "container">
+		        <form id="tomBrady2003Stats" method="GET" action="">
+                <div class="input-group mb-3">
+                    <input class="button2" type="submit" name = "tomBrady2003Stats" value = "Tom Brady 2003 Stats"> 
+                </div>
+            </form>
+        </div>
+		
+		<div class="container">
+            <?php
+                if(isset($_GET['tomBrady2003Stats']))
+                {
+                    echo "<table class='table table-md table-bordered'>";
+                    echo "<thead class='thead-dark' style='text-align: center'>";
+                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year</th><th class='col-md-2'>Game</th>
+					<th class='col-md-2'>Completions</th><th class='col-md-2'>Attempts</th><th class='col-md-2'>Yards</th>
+					<th class='col-md-2'>Touchdowns</th><th class='col-md-2'>Interceptions</th>
+					<th class='col-md-2'>Sacks</th><th class='col-md-2'>Sack yards</th></thead></tr>";
+					
+
+
+                    class TableRows extends RecursiveIteratorIterator {
+                        function __construct($it) {
+                            parent::__construct($it, self::LEAVES_ONLY);
+                        }
+
+                        function current() {
+                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
+                            return "<td style='text-align:center'>" . parent::current(). "</td>";
+                        }
+
+                        function beginChildren() {
+                            echo "<tr>";
+                        }
+
+                        function endChildren() {
+                            echo "</tr>" . "\n";
+                        }
+                    }
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project database";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT * from qbgames where playerId = 1 and yearPlayed = 2003");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                            echo $v;
+                        }
+                    }
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+					 try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 1 AND yearPlayed = 2003");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+						$p = 0;
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+							echo $v;
+                        }
+						
+                    }
+					
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+                    $conn = null;
+                    echo "</table>";
+					
+					
+                }
+            ?>
+        </div>
+		
+			<div class = "container">
+		        <form id="tomBrady2002Stats" method="GET" action="">
+                <div class="input-group mb-3">
+                    <input class="button2" type="submit" name = "tomBrady2002Stats" value = "Tom Brady 2002 Stats"> 
+                </div>
+            </form>
+        </div>
+		
+		<div class="container">
+            <?php
+                if(isset($_GET['tomBrady2002Stats']))
+                {
+                    echo "<table class='table table-md table-bordered'>";
+                    echo "<thead class='thead-dark' style='text-align: center'>";
+                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year</th><th class='col-md-2'>Game</th>
+					<th class='col-md-2'>Completions</th><th class='col-md-2'>Attempts</th><th class='col-md-2'>Yards</th>
+					<th class='col-md-2'>Touchdowns</th><th class='col-md-2'>Interceptions</th>
+					<th class='col-md-2'>Sacks</th><th class='col-md-2'>Sack yards</th></thead></tr>";
+					
+
+
+                    class TableRows extends RecursiveIteratorIterator {
+                        function __construct($it) {
+                            parent::__construct($it, self::LEAVES_ONLY);
+                        }
+
+                        function current() {
+                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
+                            return "<td style='text-align:center'>" . parent::current(). "</td>";
+                        }
+
+                        function beginChildren() {
+                            echo "<tr>";
+                        }
+
+                        function endChildren() {
+                            echo "</tr>" . "\n";
+                        }
+                    }
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project database";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT * from qbgames where playerId = 1 and yearPlayed = 2002");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                            echo $v;
+                        }
+                    }
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+					 try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 1 AND yearPlayed = 2002");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+						$p = 0;
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+							echo $v;
+                        }
+						
+                    }
+					
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+                    $conn = null;
+                    echo "</table>";
+					
+					
+                }
+            ?>
+        </div>
+		
+		<div class = "container">
+		        <form id="tomBrady2001Stats" method="GET" action="">
+                <div class="input-group mb-3">
+                    <input class="button2" type="submit" name = "tomBrady2001Stats" value = "Tom Brady 2001 Stats"> 
+                </div>
+            </form>
+        </div>
+		
+		<div class="container">
+            <?php
+                if(isset($_GET['tomBrady2001Stats']))
+                {
+                    echo "<table class='table table-md table-bordered'>";
+                    echo "<thead class='thead-dark' style='text-align: center'>";
+                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year</th><th class='col-md-2'>Game</th>
+					<th class='col-md-2'>Completions</th><th class='col-md-2'>Attempts</th><th class='col-md-2'>Yards</th>
+					<th class='col-md-2'>Touchdowns</th><th class='col-md-2'>Interceptions</th>
+					<th class='col-md-2'>Sacks</th><th class='col-md-2'>Sack yards</th></thead></tr>";
+					
+
+
+                    class TableRows extends RecursiveIteratorIterator {
+                        function __construct($it) {
+                            parent::__construct($it, self::LEAVES_ONLY);
+                        }
+
+                        function current() {
+                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
+                            return "<td style='text-align:center'>" . parent::current(). "</td>";
+                        }
+
+                        function beginChildren() {
+                            echo "<tr>";
+                        }
+
+                        function endChildren() {
+                            echo "</tr>" . "\n";
+                        }
+                    }
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project database";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT * from qbgames where playerId = 1 and yearPlayed = 2001");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                            echo $v;
+                        }
+                    }
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+					 try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 1 AND yearPlayed = 2001");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+						$p = 0;
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+							echo $v;
+                        }
+						
+                    }
+					
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+                    $conn = null;
+                    echo "</table>";
+					
+					
+                }
+            ?>
+        </div>
+		
+		<div class = "container">
+		        <form id="tomBrady2000Stats" method="GET" action="">
+                <div class="input-group mb-3">
+                    <input class="button2" type="submit" name = "tomBrady2000Stats" value = "Tom Brady 2000 Stats"> 
+                </div>
+            </form>
+        </div>
+		
+		<div class="container">
+            <?php
+                if(isset($_GET['tomBrady2000Stats']))
+                {
+                    echo "<table class='table table-md table-bordered'>";
+                    echo "<thead class='thead-dark' style='text-align: center'>";
+                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year</th><th class='col-md-2'>Game</th>
+					<th class='col-md-2'>Completions</th><th class='col-md-2'>Attempts</th><th class='col-md-2'>Yards</th>
+					<th class='col-md-2'>Touchdowns</th><th class='col-md-2'>Interceptions</th>
+					<th class='col-md-2'>Sacks</th><th class='col-md-2'>Sack yards</th></thead></tr>";
+					
+
+
+                    class TableRows extends RecursiveIteratorIterator {
+                        function __construct($it) {
+                            parent::__construct($it, self::LEAVES_ONLY);
+                        }
+
+                        function current() {
+                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
+                            return "<td style='text-align:center'>" . parent::current(). "</td>";
+                        }
+
+                        function beginChildren() {
+                            echo "<tr>";
+                        }
+
+                        function endChildren() {
+                            echo "</tr>" . "\n";
+                        }
+                    }
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project database";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT * from qbgames where playerId = 1 and yearPlayed = 2000");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                            echo $v;
+                        }
+                    }
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+					 try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 1 AND yearPlayed = 2000");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+						$p = 0;
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+							echo $v;
+                        }
+						
+                    }
+					
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+                    $conn = null;
+                    echo "</table>";
+					
+					
+                }
+            ?>
+        </div>
+		
+		
+		<div class = "container">
+		
+            <form id="tomBradyCareerStats" method="GET" action="">
                 <div class="input-group mb-3">
                     <input class="button2" type="submit" name = "tomBradyCareerStats" value = "Tom Brady Career Stats"> 
                 </div>
@@ -1315,7 +2236,7 @@ global $playerNames;
 		
 		<div class="container">
             <?php
-                if(isset($_POST['tomBradyCareerStats']))
+                if(isset($_GET['tomBradyCareerStats']))
                 {
                     echo "<table class='table table-md table-bordered'>";
                     echo "<thead class='thead-dark' style='text-align: center'>";
@@ -1373,7 +2294,7 @@ global $playerNames;
                         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                         // SQL
-                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 1");
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed - yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 1");
                         $stmt->execute();
 
                         // set the resulting array to associative

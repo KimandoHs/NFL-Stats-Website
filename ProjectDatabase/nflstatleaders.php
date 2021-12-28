@@ -34,6 +34,13 @@ global $playerNames;
 			text-align:center;
 			font-size:18px;
 		}
+		
+		.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+		}
 	
 		.sidenav {
 		height: 100%;
@@ -80,7 +87,7 @@ global $playerNames;
 		
 		<div class="sidenav">
 		<a href="index.php">Homepage</a>
-		<a href="nflstatleaders.php">NFL Stat Leaders</a>
+		<a href="#services">NFL Stat Leaders</a>
 		<a href="#services">NFL Standings</a>
 		</div>
 		
@@ -146,14 +153,13 @@ global $playerNames;
             <h1> NFL Stats </h1>
 			</header>
         </div>
+		
 		<div class = "container">
-		<p style = "margin-top:1cm;margin-bottom:1cm;">Hi, this is a website designed by James Ngo. This is a project to learn html/php and databases. Graphic design is my passion. </p> 
-		</div>
-		<div class = "container">
-			   
-	 
-            <?php
-                
+		
+		<div class="container" style = "text-align:center">
+		
+            <h2 style ="text-align:center;margin-top:1cm;margin-bottom:1cm;"> 2021 NFL Passing Yards Leaders: </h2>
+			<?php 
 					$servername = "localhost";
                     $username = "root";
                     $password = "";
@@ -164,98 +170,58 @@ global $playerNames;
 						echo 'Connection Failed: '.$con->connect_error;
 					}
 					else{
-						$sql="select * from player";
+						$sql="select p.playerFirstName, p.playerLastName, SUM(q.yards) FROM player p, qbgames q WHERE p.playerId = q.PlayerId AND q.yearPlayed = 2021 GROUP BY q.playerId";
 						$result = $con->query($sql);
-
+						$k = 0;
+						
 						while($row=$result->fetch_assoc()){
-						$name = $row["playerFirstName"] . $row["playerLastName"];
-						$name1 = $row["playerFirstName"] . ' ' .$row["playerLastName"];
-						
-						$playerNamesSpace[] = $name1; 
-						$playerNames[] = $name; 
-						//echo 'First_name:  '.$row["playerFirstName"];
-
-
-            }       
-
-        }
-                    echo "<table class='table table-md table-bordered'>";
-                    echo "<thead class='thead-dark' style='text-align: center'>";
-                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year Drafted</th><th class='col-md-2'>Year Retired</th>
-					<th class='col-md-2'>Position</th><th class='col-md-2'>No.</th><th class='col-md-2'>First Name</th>
-					<th class='col-md-2'>Last Name</th><th class='col-md-2'>Hyperlink</th></thead></tr>";
-					
-
-
-                    class TableRows extends RecursiveIteratorIterator {
-                        function __construct($it) {
-                            parent::__construct($it, self::LEAVES_ONLY);
-                        }
-
-                        function current() {
-                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
-                            return "<td style='text-align:center'>" . parent::current(). "</td>";
-                        }
-						
-                        function beginChildren() {
-                            echo "<tr>";
-                        }
-						
-                        function endChildren() {
-							global $playerNamesSpace; 
-							global $playerNames;
-							global $p;
-							if(isset($playerNames)) {echo "<td><a href='playerPages/$playerNames[$p].php'>$playerNamesSpace[$p]</a></td>"; $p = $p + 1;}
-							echo "</tr>" . "\n";
+							$k = $k + 1;
+							$name = $row["playerFirstName"] . $row["playerLastName"];
+							$name1 = $row["playerFirstName"] . ' ' .$row["playerLastName"];
+							//debugging 
+							//print_r($row);
+							$playerNamesSpace[] = $name1; 
+							$playerNames[] = $name; 
 							
-                        }
-                    }
-
-
-                    try {
-                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                        // SQL
-                        $stmt = $conn->prepare("SELECT * from player");
-                        $stmt->execute();
-
-                        // set the resulting array to associative
-                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
-						$p = 0;
-                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
-                            //echo $playerNames[$p];
-							echo $v;
-							//echo gettype($v);
-							//echo $p; 
-                        }
 						
-                    }
-					
-                    catch(PDOException $e) {
-                        echo "Error: " . $e->getMessage();
-                    }
-					
-					/*
-					 foreach(new TableRows(new RecursiveArrayIterator($playerNames)) as $k=>$v) {
-                        
-							echo $v;
-							echo gettype($v);
-							echo $p; 
-                        }
-					*/
-					
-                    $conn = null;
-					
-                    echo "</table>";
-					//echo '<pre>'; print_r($playerNames); echo '</pre>';
-					
-					
-					
-					
-                
-            ?>
+							$filename = 'playerimages/'. $row["playerFirstName"] . $row["playerLastName"] . '.png';
+
+							if (file_exists($filename)) {
+								//echo "The file $filename exists <br>"; //debug 
+								echo "<img src = '$filename' alt='$filename' class='center' style='object-fit: cover;width:300px;height:300px;vspace=200px;hspace=200px;border: 3px solid DarkRed;'/><br><br>";
+								echo $k . ': ' . $row["playerFirstName"] . ' ' . $row["playerLastName"] . '<br>';
+								echo 'Passing Yards: '.$row["SUM(q.yards)"] . '<br>' ;
+								echo '<br>' ;
+							} 
+							else {
+								$filename = 'playerimages/'. $row["playerFirstName"] . $row["playerLastName"] . '.jpg';
+								echo "<img src = '$filename' alt='$filename' class='center' style='object-fit: cover;width:300px;height:300px;vspace=200px;hspace=200px;border: 3px solid DarkRed;'/><br><br>";
+								echo $k . ': ' . $row["playerFirstName"] . ' ' . $row["playerLastName"] . '<br>';
+								echo 'Passing Yards: '.$row["SUM(q.yards)"] . '<br>' ;
+								echo '<br>' ;
+								
+							}
+						}
+					}
+			
+			
+			?>
+			
         </div>
+	 
+            <?php
+			//code to check if a file exists 
+/* $filename = 'playerimages/TomBrady.png';
+
+if (file_exists($filename)) {
+    echo "The file $filename exists";
+} else {
+    echo "The file $filename does not exist";
+}
+*/
+?>
 
     </body>
 </html>
+
+

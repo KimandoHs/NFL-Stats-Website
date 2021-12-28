@@ -22,25 +22,34 @@ global $playerNames;
 		.button2 {
 			background-color: #9370DB;
 			border-radius: 4px;
+			color:white;
 			}
 		
 		.button2:hover {
-		color: #f1f1f1;
+		color: Yellow;
 		}
 		
 		#main-header{
 			margin-top:2cm;
 			margin-bottom:2cm;
 			text-align:center;
-			border:2px solid black;
-			background-color:MediumSlateBlue;
 			color:white;
-			padding:20px;
+			padding:45px;
+			border:2px solid black;
+			background-image: url("../banners/Ravens.jpg");
+			background-repeat: no-repeat;
+			background-size: 1110px 369px;
+			
 		}
 		
 		#main-footer{ 
 			text-align:center;
 			font-size:18px;
+		}
+		
+		.background-tint {
+		background-color: DarkOrchid; /* Tint color */
+		background-blend-mode: multiply;
 		}
 		
 		.center {
@@ -93,7 +102,7 @@ global $playerNames;
 
 <div class="sidenav">
   <a href="../index.php">Homepage</a>
-  <a href="#services">NFL Stat Leaders</a>
+  <a href="../nflstatleaders.php">NFL Stat Leaders</a>
   <a href="#services">NFL Standings</a>
 </div>
 
@@ -163,8 +172,8 @@ global $playerNames;
 		 </div>
 		
 		<div class="container">
-			<header id = "main-header">
-            <h1> NFL Stats Presented to You by Walmart </h1>
+			<header id = "main-header" class = "background-tint">
+            <h1> NFL Stats</h1>
 			</header>
         </div>
 		
@@ -181,83 +190,466 @@ global $playerNames;
 	?> </div>
 	
 	<div class = "container">
-		
-            <form id="tomBrady2021Stats" method="post" action="">
+            <form id="lamarJackson2021Stats" method="get" action="">
                 <div class="input-group mb-3">
-                    <input class="button2" type="submit" name = "tomBrady2021Stats" value = "Lamar Jackson 2021 Stats"> 
+                    <input class="button2" type="submit" name = "lamarJackson2021Stats" value = "Lamar Jackson 2021 Stats"> 
                 </div>
             </form>
         </div>
 		
 		<div class="container">
             <?php
-                if(isset($_POST['tomBrady2021Stats']))
+                if(isset($_GET['lamarJackson2021Stats']))
                 {
-                   
+                    echo "<table class='table table-md table-bordered'>";
+                    echo "<thead class='thead-dark' style='text-align: center'>";
+                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year</th><th class='col-md-2'>Game</th>
+					<th class='col-md-2'>Completions</th><th class='col-md-2'>Attempts</th><th class='col-md-2'>Yards</th>
+					<th class='col-md-2'>Touchdowns</th><th class='col-md-2'>Interceptions</th>
+					<th class='col-md-2'>Sacks</th><th class='col-md-2'>Sack yards</th></thead></tr>";
 					
-				?>
-		<table class="sr_share" id="" data-cols-to-freeze=",2" style="border-collapse: collapse; font-size:.83em; width:100%; border: 1px sold #aaa; overflow:auto;">
-		<caption>2021 Games Table</caption>
-		<colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
-		<thead>
-		<tr>
-         <th colspan="6" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;"></th><th style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;"></th>
-         <th colspan="11" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Passing</th>
-         <th colspan="4" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Rushing</th><th style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;"></th>
-         <th colspan="6" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Fumbles</th>
-         
-		</tr>
-		<tr>
-         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Date</th>
-         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Week</th>
-         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Tm</th>
-         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;"></th>
-         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Opp</th>
-         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Result</th>
-         <th scope="col" data-over-header="Games" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
-         <th scope="col" data-over-header="Passing" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Cmp</th>
-         <th scope="col" data-over-header="Passing" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Att</th>
-         <th scope="col" data-over-header="Passing" data-filter="1" data-name="Pass Completion %" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Cmp%</th>
-         <th scope="col" data-over-header="Passing" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Yds</th>
-         <th scope="col" data-over-header="Passing" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TD</th>
-         <th scope="col" data-over-header="Passing" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Int</th>
-         <th scope="col" data-over-header="Passing" data-filter="1" data-name="Passer Rating" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Rate</th>
-         <th scope="col" data-over-header="Passing" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Sk</th>
-         <th scope="col" data-over-header="Passing" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Yds</th>
-         <th scope="col" data-over-header="Passing" data-filter="1" data-name="Yds/Pass Att" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Y/A</th>
-         <th scope="col" data-over-header="Passing" data-filter="1" data-name="Adj Yds/Pass Att" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AY/A</th>
-         <th scope="col" data-over-header="Rushing" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Rush</th>
-         <th scope="col" data-over-header="Rushing" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Yds</th>
-         <th scope="col" data-over-header="Rushing" data-filter="1" data-name="Yds/Rushing Att" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Y/A</th>
-         <th scope="col" data-over-header="Rushing" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TD</th>
-         <th scope="col" data-over-header="Scoring" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TD</th>
-         <th scope="col" data-over-header="Fumbles" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Fmb</th>
-         <th scope="col" data-over-header="Fumbles" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FL</th>
-         <th scope="col" data-over-header="Fumbles" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FF</th>
-         <th scope="col" data-over-header="Fumbles" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FR</th>
-         <th scope="col" data-over-header="Fumbles" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Yds</th>
-		 <th scope="col" data-over-header="Fumbles" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TD</th>
-        
-		</tr>
-		</thead>
-		<tbody><tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202109130rai.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">2021-09-13</a></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">BAL</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">@</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rai/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">LVR</a></td><td csk="-6" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202109130rai.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">L 27-33</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">*</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">19</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">30</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">63.33</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">235</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">98.6</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">18</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">7.83</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">8.50</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">12</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">86</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">7.17</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td></tr>
-		<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202109190rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">2021-09-19</a></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">BAL</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/kan/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">KAN</a></td><td csk="1" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202109190rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">W 36-35</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">*</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">18</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">26</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">69.23</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">239</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">78.8</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">9</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">9.19</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">6.50</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">16</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">107</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">6.69</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td></tr>
-		<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202109260det.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">2021-09-26</a></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">BAL</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">@</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/det/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">DET</a></td><td csk="2" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202109260det.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">W 19-17</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">*</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">16</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">31</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">51.61</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">287</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">81.0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">16</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">9.26</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">8.45</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">7</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">58</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">8.29</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">5</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td></tr>
-		<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202110030den.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">2021-10-03</a></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">BAL</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">@</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/den/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">DEN</a></td><td csk="16" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202110030den.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">W 23-7</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">*</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">22</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">37</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">59.46</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">316</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">96.2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">12</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">8.54</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">9.08</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">7</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">28</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4.00</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td></tr>
-		<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202110110rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">2021-10-11</a></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">5</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">BAL</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/clt/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">IND</a></td><td csk="6" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202110110rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">W 31-25</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">*</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">37</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">43</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">86.05</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">442</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">140.5</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">5</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">10.28</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">12.14</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">14</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">62</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4.43</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td></tr>
-		<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202110170rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">2021-10-17</a></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">6</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">BAL</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/sdg/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">LAC</a></td><td csk="28" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202110170rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">W 34-6</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">*</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">19</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">27</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">70.37</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">167</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">68.0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">27</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">6.19</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3.59</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">8</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">51</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">6.38</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td></tr>
-		<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202110240rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">2021-10-24</a></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">7</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">BAL</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/cin/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">CIN</a></td><td csk="-24" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202110240rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">L 17-41</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">*</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">15</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">31</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">48.39</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">257</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">87.7</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">5</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">18</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">8.29</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">8.94</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">12</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">88</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">7.33</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td></tr>
-		<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202111070rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">2021-11-07</a></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">9</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">BAL</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/min/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">MIN</a></td><td csk="3" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202111070rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">W 34-31</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">*</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">27</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">41</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">65.85</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">266</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">88.1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">13</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">6.49</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">5.76</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">21</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">120</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">5.71</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td></tr>
-		<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202111110mia.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">2021-11-11</a></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">10</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">BAL</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">@</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/mia/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">MIA</a></td><td csk="-12" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202111110mia.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">L 10-22</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">*</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">26</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">43</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">60.47</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">238</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">73.6</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">28</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">5.53</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4.95</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">9</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">39</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4.33</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td></tr>
-		<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202111280rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">2021-11-28</a></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">12</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">BAL</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/cle/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">CLE</a></td><td csk="6" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202111280rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">W 16-10</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">*</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">20</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">32</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">62.50</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">165</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">46.5</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">10</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">5.16</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0.16</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">17</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">68</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4.00</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td></tr>
-		<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202112050pit.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">2021-12-05</a></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">13</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">BAL</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">@</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/pit/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">PIT</a></td><td csk="-1" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202112050pit.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">L 19-20</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">*</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">23</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">37</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">62.16</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">253</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">80.1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">7</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">34</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">6.84</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">6.16</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">8</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">55</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">6.88</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td></tr>
-		<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202112120cle.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">2021-12-12</a></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">14</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">BAL</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">@</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/cle/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">CLE</a></td><td csk="-2" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202112120cle.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">L 22-24</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">*</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">100.00</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">17</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">84.4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4.25</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4.25</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">5</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.50</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0</td></tr>
-		<tr><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202112260cin.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">2021-12-26</a></td><td align="right" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">16</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">BAL</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">@</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/cin/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">CIN</a></td><td colspan="99" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202112260cin.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">Preview</a>&nbsp;· <a href="https://www.pro-football-reference.com/players/J/JackLa00/gamelog/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool&amp;opp_id=cin">Stats for 7 games vs. Bengals</a>&nbsp;·  Avg. 13/22, 166 yds, 1.3 TD, 0.4 int (<a href="https://www.pro-football-reference.com/boxscores/202110240rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">Last in 2021</a>)</td></tr><tr><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202201020rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">2022-01-02</a></td><td align="right" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">17</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">BAL</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/ram/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">LAR</a></td><td colspan="99" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202201020rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">Preview</a>&nbsp;· <a href="https://www.pro-football-reference.com/players/J/JackLa00/gamelog/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool&amp;opp_id=ram">Stats for 1 game vs. Rams</a>&nbsp;·   15/20, 169 yds, 5 TD, 0 int (<a href="https://www.pro-football-reference.com/boxscores/201911250ram.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">in 2019</a>)</td></tr><tr><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202201090rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">2022-01-09</a></td><td align="right" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">18</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">BAL</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/pit/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">PIT</a></td><td colspan="99" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/boxscores/202201090rav.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">Preview</a>&nbsp;· <a href="https://www.pro-football-reference.com/players/J/JackLa00/gamelog/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool&amp;opp_id=pit">Stats for 5 games vs. Steelers</a>&nbsp;·  Avg. 11/19, 127 yds, 0.8 TD, 1.2 int (<a href="https://www.pro-football-reference.com/boxscores/202112050pit.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">Last in 2021</a>)</td></tr><tr><td colspan="36" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.pro-football-reference.com/teams/rav/2021.htm?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">Ravens 2021 Stats and Schedule</a>&nbsp;· <a href="https://www.pro-football-reference.com/players/J/JackLa00/splits/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">Lamar Jackson Splits</a>&nbsp;· <a href="https://www.pro-football-reference.com/players/J/JackLa00/gamelog/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">Lamar Jackson Gamelogs</a>&nbsp;· <a href="https://www.pro-football-reference.com/players/J/JackLa00/touchdowns/passing/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">TD Passes</a>&nbsp;· <a href="https://www.pro-football-reference.com/players/comeback.cgi?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool&amp;player=JackLa00">Game-Winning Drives</a>&nbsp;· <a href="https://www.pro-football-reference.com/players/J/JackLa00/penalties/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">Penalties</a></td></tr>
-		</tbody></table><div id="credit_stats" class="sr_share" style="font-size: 0.83em;">Provided by <a href="https://www.sports-reference.com/sharing.html?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">Pro-Football-Reference.com</a>: <a href="https://www.pro-football-reference.com/players/J/JackLa00.htm?sr&amp;utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool#stats">View Original Table</a><br>Generated 12/26/2021.</div>
-					<?php
+
+
+                    class TableRows extends RecursiveIteratorIterator {
+                        function __construct($it) {
+                            parent::__construct($it, self::LEAVES_ONLY);
+                        }
+
+                        function current() {
+                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
+                            return "<td style='text-align:center'>" . parent::current(). "</td>";
+                        }
+
+                        function beginChildren() {
+                            echo "<tr>";
+                        }
+
+                        function endChildren() {
+                            echo "</tr>" . "\n";
+                        }
+                    }
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project database";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT * from qbgames where playerId = 2 and yearPlayed = 2021");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                            echo $v;
+                        }
+                    }
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+					 try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 2 and yearPlayed = 2021");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+						$p = 0;
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+							echo $v;
+                        }
+						
+                    }
+					
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+                    $conn = null;
+                    echo "</table>";
+					
+					
                 }
             ?>
-			
         </div>
+		
+		<div class = "container">
+            <form id="lamarJackson2020Stats" method="get" action="">
+                <div class="input-group mb-3">
+                    <input class="button2" type="submit" name = "lamarJackson2020Stats" value = "Lamar Jackson 2020 Stats"> 
+                </div>
+            </form>
+        </div>
+		
+		<div class="container">
+            <?php
+                if(isset($_GET['lamarJackson2020Stats']))
+                {
+                    echo "<table class='table table-md table-bordered'>";
+                    echo "<thead class='thead-dark' style='text-align: center'>";
+                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year</th><th class='col-md-2'>Game</th>
+					<th class='col-md-2'>Completions</th><th class='col-md-2'>Attempts</th><th class='col-md-2'>Yards</th>
+					<th class='col-md-2'>Touchdowns</th><th class='col-md-2'>Interceptions</th>
+					<th class='col-md-2'>Sacks</th><th class='col-md-2'>Sack yards</th></thead></tr>";
+					
+
+
+                    class TableRows extends RecursiveIteratorIterator {
+                        function __construct($it) {
+                            parent::__construct($it, self::LEAVES_ONLY);
+                        }
+
+                        function current() {
+                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
+                            return "<td style='text-align:center'>" . parent::current(). "</td>";
+                        }
+
+                        function beginChildren() {
+                            echo "<tr>";
+                        }
+
+                        function endChildren() {
+                            echo "</tr>" . "\n";
+                        }
+                    }
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project database";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT * from qbgames where playerId = 2 and yearPlayed = 2020");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                            echo $v;
+                        }
+                    }
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+					 try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 2 and yearPlayed = 2020");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+						$p = 0;
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+							echo $v;
+                        }
+						
+                    }
+					
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+                    $conn = null;
+                    echo "</table>";
+					
+					
+                }
+            ?>
+        </div>
+		
+				<div class = "container">
+		        <form id="lamarJackson2019Stats" method="GET" action="">
+                <div class="input-group mb-3">
+                    <input class="button2" type="submit" name = "lamarJackson2019Stats" value = "Lamar Jackson 2019 Stats"> 
+                </div>
+            </form>
+        </div>
+		
+		<div class="container">
+            <?php
+                if(isset($_GET['lamarJackson2019Stats']))
+                {
+                    echo "<table class='table table-md table-bordered'>";
+                    echo "<thead class='thead-dark' style='text-align: center'>";
+                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year</th><th class='col-md-2'>Game</th>
+					<th class='col-md-2'>Completions</th><th class='col-md-2'>Attempts</th><th class='col-md-2'>Yards</th>
+					<th class='col-md-2'>Touchdowns</th><th class='col-md-2'>Interceptions</th>
+					<th class='col-md-2'>Sacks</th><th class='col-md-2'>Sack yards</th></thead></tr>";
+					
+
+
+                    class TableRows extends RecursiveIteratorIterator {
+                        function __construct($it) {
+                            parent::__construct($it, self::LEAVES_ONLY);
+                        }
+
+                        function current() {
+                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
+                            return "<td style='text-align:center'>" . parent::current(). "</td>";
+                        }
+
+                        function beginChildren() {
+                            echo "<tr>";
+                        }
+
+                        function endChildren() {
+                            echo "</tr>" . "\n";
+                        }
+                    }
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project database";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT * from qbgames where playerId = 2 and yearPlayed = 2019");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                            echo $v;
+                        }
+                    }
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+					 try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 2 AND yearPlayed = 2019");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+						$p = 0;
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+							echo $v;
+                        }
+						
+                    }
+					
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+                    $conn = null;
+                    echo "</table>";
+					
+					
+                }
+            ?>
+        </div>
+		
+			<div class = "container">
+		        <form id="lamarJackson2018Stats" method="GET" action="">
+                <div class="input-group mb-3">
+                    <input class="button2" type="submit" name = "lamarJackson2018Stats" value = "Lamar Jackson 2018 Stats"> 
+                </div>
+            </form>
+        </div>
+		
+		<div class="container">
+            <?php
+                if(isset($_GET['lamarJackson2018Stats']))
+                {
+                    echo "<table class='table table-md table-bordered'>";
+                    echo "<thead class='thead-dark' style='text-align: center'>";
+                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year</th><th class='col-md-2'>Game</th>
+					<th class='col-md-2'>Completions</th><th class='col-md-2'>Attempts</th><th class='col-md-2'>Yards</th>
+					<th class='col-md-2'>Touchdowns</th><th class='col-md-2'>Interceptions</th>
+					<th class='col-md-2'>Sacks</th><th class='col-md-2'>Sack yards</th></thead></tr>";
+					
+
+
+                    class TableRows extends RecursiveIteratorIterator {
+                        function __construct($it) {
+                            parent::__construct($it, self::LEAVES_ONLY);
+                        }
+
+                        function current() {
+                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
+                            return "<td style='text-align:center'>" . parent::current(). "</td>";
+                        }
+
+                        function beginChildren() {
+                            echo "<tr>";
+                        }
+
+                        function endChildren() {
+                            echo "</tr>" . "\n";
+                        }
+                    }
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project database";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT * from qbgames where playerId = 2 and yearPlayed = 2018");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                            echo $v;
+                        }
+                    }
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+					 try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 2 AND yearPlayed = 2018");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+						$p = 0;
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+							echo $v;
+                        }
+						
+                    }
+					
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+                    $conn = null;
+                    echo "</table>";
+					
+					
+                }
+            ?>
+        </div>
+		
+		
+		<div class = "container">
+		
+            <form id="lamarJacksonCareerStats" method="GET" action="">
+                <div class="input-group mb-3">
+                    <input class="button2" type="submit" name = "lamarJacksonCareerStats" value = "Lamar Jackson Career Stats"> 
+                </div>
+            </form>
+        </div>
+		
+		<div class="container">
+            <?php
+                if(isset($_GET['lamarJacksonCareerStats']))
+                {
+                    echo "<table class='table table-md table-bordered'>";
+                    echo "<thead class='thead-dark' style='text-align: center'>";
+                    echo "<tr><th class='col-md-2'>QB ID</th><th class='col-md-2'>Year</th><th class='col-md-2'>Game</th>
+					<th class='col-md-2'>Completions</th><th class='col-md-2'>Attempts</th><th class='col-md-2'>Yards</th>
+					<th class='col-md-2'>Touchdowns</th><th class='col-md-2'>Interceptions</th>
+					<th class='col-md-2'>Sacks</th><th class='col-md-2'>Sack yards</th></thead></tr>";
+					
+
+
+                    class TableRows extends RecursiveIteratorIterator {
+                        function __construct($it) {
+                            parent::__construct($it, self::LEAVES_ONLY);
+                        }
+
+                        function current() {
+                            // return "<td style='width: 30px; border: 1px solid black;'>" . parent::current(). "</td>";
+                            return "<td style='text-align:center'>" . parent::current(). "</td>";
+                        }
+
+                        function beginChildren() {
+                            echo "<tr>";
+                        }
+
+                        function endChildren() {
+                            echo "</tr>" . "\n";
+                        }
+                    }
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "project database";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 2 GROUP BY yearPlayed");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                            echo $v;
+                        }
+                    }
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+					 try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        // SQL
+                        $stmt = $conn->prepare("SELECT playerId, yearPlayed - yearPlayed, MAX(gameNumber), sum(completions), sum(attempts), sum(yards), sum(touchdowns), sum(interceptions), sum(sacks), sum(sackyards) from qbgames where playerId = 2");
+                        $stmt->execute();
+
+                        // set the resulting array to associative
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+						$p = 0;
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+							echo $v;
+                        }
+						
+                    }
+					
+                    catch(PDOException $e) {
+                        echo "Error: " . $e->getMessage();
+                    }
+					
+                    $conn = null;
+                    echo "</table>";
+					
+					
+                }
+            ?>
+        </div>
+		
     </body>
 </html>
